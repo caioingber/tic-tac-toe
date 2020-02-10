@@ -37,6 +37,10 @@ body {
     transition: .5s;
 }
 
+.blank {
+    background-color: white;
+}
+
 .end-game {
     border: 2px solid black;
     border-radius: 10%;

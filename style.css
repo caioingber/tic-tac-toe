@@ -18,7 +18,7 @@ body {
     grid-template-rows: repeat(3, 1fr);
     grid-gap: 2px;
     background-color: black;
-    height: 300px;
+    height: 50vh;
     width: 40%;
     margin: 100px;
 }

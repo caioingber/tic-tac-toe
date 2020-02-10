@@ -27,6 +27,14 @@ body {
     background-color: white;
 }
 
+.red {
+    background-color: red;
+}
+
+.blue {
+    background-color: blue;
+}
+
 .end-game {
     border: 2px solid black;
     border-radius: 10%;

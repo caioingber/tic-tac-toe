@@ -29,10 +29,12 @@ body {
 
 .red {
     background-color: red;
+    transition: .5s;
 }
 
 .blue {
     background-color: blue;
+    transition: .5s;
 }
 
 .end-game {

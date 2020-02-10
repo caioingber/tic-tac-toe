@@ -17,7 +17,7 @@ for (let i=0; i < boxes.length; i++) {
             boxes[i].classList.add('red')
             color = 'red'
             whoseTurn.innerHTML = 'Blue\'s Turn'
-        } else if (color !== 'red' && turn < 10) {
+        } else {
             boxes[i].classList.add('blue')
             whoseTurn.innerHTML = 'Red\'s Turn'
             color = 'blue'

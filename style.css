@@ -1,0 +1,14 @@
+#game-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 2px;
+    background-color: black;
+    height: 300px;
+    width: 50%;
+    margin: 100px auto;
+}
+
+.game-box {
+    background-color: white;
+}

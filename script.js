@@ -20,7 +20,10 @@ function showMark (e) {
     turn +=1
     if (turn % 2 === 0 && turn < 10) {
         e.target.classList.add('red')
+        e.target.innerText = 'X'
         whoseTurn.innerHTML = 'Blue\'s Turn'
+        whoseTurn.classList.add('blue')
+        whoseTurn.classList.remove('red')
         red.push(Number(e.target.id))
         colorName = "Red"
         if(red.length >= 3) {
@@ -28,7 +31,10 @@ function showMark (e) {
         }
     } else {
         e.target.classList.add('blue')
+        e.target.innerText = 'O'
         whoseTurn.innerHTML = 'Red\'s Turn'
+        whoseTurn.classList.add('red')
+        whoseTurn.classList.remove('blue')
         blue.push(Number(e.target.id))
         colorName = "Blue"
         if(blue.length >= 3) {
@@ -42,7 +48,10 @@ function showMark (e) {
     }
     //checking Tie
     if (turn >= 9 && isWinner === false) {
-        whoseTurn.innerHTML = 'It\'s a tie!'
+        whoseTurn.classList.add('game-over')
+        whoseTurn.classList.remove('red')
+        whoseTurn.classList.remove('blue')
+        whoseTurn.innerHTML = `It's a tie! Click 'New Game' to Start a New Round`
     }
     e.target.removeEventListener('click', showMark)
 }
@@ -57,6 +66,8 @@ function resetGame(e) {
     for (let i = 0; i <boxes.length; i++){
         boxes[i].classList.remove('blue')
         boxes[i].classList.remove('red')
+        whoseTurn.classList.remove('red', 'blue', 'game-over')
+        boxes[i].innerText = ''
         boxes[i].addEventListener('click', showMark)
     }
     red = []
@@ -75,7 +86,8 @@ function compare (color) {
             if (color.includes(winningConditions[i][j]) === true) {
                 matchCount = matchCount + 1
                 if (matchCount === 3) {
-                    whoseTurn.innerHTML = `${colorName} Wins!`
+                    whoseTurn.classList.add('game-over')
+                    whoseTurn.innerHTML = `${colorName} Wins! Click 'New Game' to Start a New Round`
                     isWinner = true
                 }
             }

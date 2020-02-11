@@ -10,6 +10,8 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    font-family: 'Sriracha', cursive;
+
 }
 
 #game-container {
@@ -25,15 +27,24 @@ body {
 
 .game-box {
     background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 5vw;
 }
 
 .red {
-    background-color: red;
+    color: red;
     transition: .5s;
 }
 
 .blue {
-    background-color: blue;
+    color: blue;
+    transition: .5s;
+}
+
+.game-over {
+    color: purple;
     transition: .5s;
 }
 
